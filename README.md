@@ -57,7 +57,7 @@ Notes:
 
 # Example
 
-Get links from page:
+### Get all links from a web page:
 
 ```
 set doc = ##class(dc.ed.html.Parser).parse("https://google.com")
@@ -84,4 +84,16 @@ Business Solutions      /services/
 About Google    /intl/en/about.html
 Privacy /intl/en/policies/privacy/
 Terms   /intl/en/policies/terms/
+```
+
+### Get all text from a web page:
+
+```
+set doc = ##class(dc.ed.html.Parser).parse("https://google.com")
+write doc.text()
+```
+
+Returns:
+```
+GoogleSearch Images Maps Play YouTube News Gmail Drive More » Web History | Settings | Sign in Advanced search Advertising Programs Business Solutions About Google© 2021 - Privacy - Terms
 ```
